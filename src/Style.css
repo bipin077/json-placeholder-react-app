@@ -32,7 +32,7 @@
 	font-size: 20px;
 	padding: 5px 10px;
 	font-weight: 600;
-	color: #023964;
+	color: blue;
 }
 
 .nav-links ul li:hover
@@ -51,7 +51,6 @@
 	color: #000000;
 }
 
-
 .banner-data{
 	position: relative;
 	width: 100%;
@@ -61,19 +60,7 @@
 .banner-data .image-section
 {
 	width: 100%;
-
-}
-
-.banner-data .image-section img
-{
-	width: 100%;
 	text-align: center;
-	opacity: 0.7;
-}
-
-.banner-data .image-section img:hover
-{
-	opacity: 1;
 }
 
 .banner-data .content-section
@@ -91,9 +78,8 @@
 
 .banner-data .content-section p
 {
-	font-size: 15px;
+	font-size: 20px;
 	color: #fff;
-	max-width: 600px;
 }
 
 .banner-data .content-section button
@@ -181,8 +167,4 @@
 	border: 2px solid #fff;
 	border-radius:5px ;
 	background: #023964;
-}
-
-.index-class{
-	width: 100%;
 }
