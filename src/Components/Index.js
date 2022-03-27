@@ -31,6 +31,34 @@ function Index()
 					</div>
 				</div>
 			</section>
+
+			<section className="whychoose-us">
+				<div className="whychoose-content">
+					<h2>Why Choose Us</h2>
+					<div class="content-section">
+						<div class="items">
+							<img src="assets/badge.png" alt="" />
+							<h3>Best API</h3>
+							<p>JSON Placeholder Is Best API For fake data testing</p>
+						</div>
+						<div class="items">
+							<img src="assets/trusted.png" alt="" />
+							<h3>Developers Trust</h3>
+							<p>Over world JSON Placeholder keep trust of millions of developers. </p>
+						</div>
+						<div class="items">
+							<img src="assets/easy-to-use.png" alt="" />
+							<h3>Light Weight</h3>
+							<p>Due to its light weight its easily to improve developers experience</p>
+						</div>
+						<div class="items">
+							<img src="assets/free.png" alt="" />
+							<h3>Unlimited And Free Access</h3>
+							<p>Free and unlimited makes JSON Placeholder trustable and realiable to developers</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div>
 		);
 }

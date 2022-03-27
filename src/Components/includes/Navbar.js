@@ -20,20 +20,23 @@ function Navbar() {
           <div className="nav-links">
             <ul>
                 <Link to="/"><li>Home</li></Link>
+                <Link to="/about-us"><li>About Us</li></Link>
                 <Link to="/posts"><li>Posts</li></Link>
                 <Link to="/comments"><li>Comments</li></Link>
                 <Link to="/users"><li>Users</li></Link>
-                <Link to="/about-us"><li>About Us</li></Link>
                 <Link to="/contact-us"><li>Contact Us</li></Link>
             </ul>
+          </div>
+          <div className="icons">
+              
           </div>
         </div>
         <Routes>
                 <Route path='/' element={ <Index /> } />
+                <Route path='/about-us' element={<About />} />
                 <Route path='/posts' element={<Posts />} />
                 <Route path='/comments' element={<Comments />} />
                 <Route path='/users' element={<Users />} />
-                <Route path='/about-us' element={<About />} />
                 <Route path='/contact-us' element={<Contact />} />
               </Routes>
       </BrowserRouter>
