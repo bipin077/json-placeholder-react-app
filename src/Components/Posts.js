@@ -1,32 +1,67 @@
 import React from 'react';
 import "./Style.css";
+import StaticPosts from './static/StaticPosts';
+import axios from "axios";
 
-const Posts=()=>
+class Posts extends React.Component
 {
-	return(
+	constructor()
+	{
+		super();
+		this.state={
+			posts:null
+		}
+	}
+	componentDidMount()
+	{
+		axios.get('https://jsonplaceholder.typicode.com/posts')
+		.then((response)=>{
+			this.setState({posts:response.data},function()
+				{
+					console.log(this.state.posts);
+				});
+		})
+		.catch((error)=>
+		{
+			console.log(error);
+		})
+
+	}
+
+	render()
+	{
+		return(
 		<>
 			<div className="posts-container">
-				<h1>All Posts</h1>
 				<div className="posts-section">
-					<div className="items">
-						<span className="data-userid">1</span>
-						<h2>nesciunt iure omnis dolorem tempora et accusantium</h2>
-						<p>consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas</p>
-					</div>
-					<div className="items">
-						<span className="data-userid">2</span>
-						<h2>nesciunt iure omnis dolorem tempora et accusantium</h2>
-						<p>consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas</p>
-					</div>
-					<div className="items">
-						<span className="data-userid">3</span>
-						<h2>nesciunt iure omnis dolorem tempora et accusantium</h2>
-						<p>consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas</p>
-					</div>
+					<StaticPosts title="title1" subtitle="subtitle1"/>
 				</div>
+				<div className="posts-section">
+					<StaticPosts title="title1" subtitle="subtitle1"/>
+				</div>
+				<div className="posts-section">
+					<StaticPosts title="title1" subtitle="subtitle1"/>
+				</div>
+				<div className="posts-section">
+					<StaticPosts title="title1" subtitle="subtitle1"/>
+				</div>
+				<div className="posts-section">
+					<StaticPosts title="title1" subtitle="subtitle1"/>
+				</div>
+			</div>
+			<div className="pagination">
+				<ul>
+					<li>Prev</li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>Next</li>
+				</ul>
 			</div>
 		</>
 		);
+	}
 }
 
 export default Posts;
